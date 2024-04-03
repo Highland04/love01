@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="boxheart">
+            <div class="heart"><h1>Bấm vô đi bé</h1></div>
+            <div class="beat"></div>
+        </div>
+        <div class="boxchoose">
+            <h2>Thách bé nhấn được chữ "KHÔNG YÊU" đó </h2>
+            <h2>😜😜😜😜</h2>
+            <div class="listbutton">
+                <button id="no">Không Yêu</button>
+                <button id="yes">Em Yêu Anh Nhìuuuuuu ❤️</button>
+            </div>
+        </div>
+        <div class="popup">
+            <div class="inner">
+                <h3>❤️Anh cũng yêu bé ❤️</h3>
+                <h3>Chúc Mừng Sinh Nhật Bé <br>04/04/2007 - 04/04/2024</h3>
+                <h3>🥳❤️🥳❤️🥳❤️🥳❤️</h3>
+                <img src="love.gif" alt="" />
+                <p>Thứ 7  nì đi ăn đi ún mừng <span>NGÀY SINH NHẬT</span> của bé iu nhaaaaaa</p>
+            </div>
+        </div>
+        <script>
+            const noBtn = document.querySelector("#no");
+            const yesBtn = document.querySelector("#yes");
+            let boxheart = document.querySelector(".boxheart");
+            let boxchoose = document.querySelector(".boxchoose");
+            let popup = document.querySelector(".popup");
+            boxheart.addEventListener("click", function () {
+                boxheart.classList.add("active");
+                boxchoose.classList.add("active");
+            });
+            yesBtn.addEventListener("click", function () {
+                popup.classList.add("active");
+            });
+            noBtn.addEventListener("mouseenter", () => {
+                const top = Math.floor(Math.random() * window.innerHeight);
+                const left = Math.floor(Math.random() * window.innerWidth);
+
+                noBtn.style.top = `${top}px`;
+                noBtn.style.left = `${left}px`;
+            });
+        </script>
+    </body>
+</html>
